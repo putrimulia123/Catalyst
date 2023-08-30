@@ -1,0 +1,79 @@
+Point 2
+(test cases)
+
+(+)Feature: Login with email
+Scenario : Successful login
+Given I am on the login page
+When I fill in "Email" with "putri@gmail.com"
+And I fill in "Password" with "test123"
+And I click the login button
+Then I should be taken to the home page voila
+
+(-)Feature: Login with email
+Scenario : Unsuccessful login
+Given I am on the login page
+When I fill in incorrect email or password
+And I click the login button
+Then warning message "Email atau sandi salah" displayed
+
+(+)Feature: Login with facebook
+Scenario : Successful login with facebook
+Given I am on the login page
+When I click the facebook button
+Then entry point facebook login page displayed
+When I fill in "Email" with "putri@gmail.com"
+And I fill in "Password" with "test123"
+And I click the login button on facebook
+Then I should be taken to the home page voila
+
+(-)Feature: Login with facebook
+Scenario : Unsuccessful login with facebook
+Given I am on the login page
+When I click the facebook button
+Then entry point facebook login page displayed
+When I fill in incorrect facebook email or password
+And I click the login button on facebook
+Then warning message "Email atau sandi salah" displayed
+
+(+)Feature: Login with Google
+Scenario : Successful login with Google
+Given I am on the login page
+When I click the Google button
+Then entry point Google login page displayed
+When I choose Google account
+Then I should be taken to the home page voila
+
+(-)Feature: Login with Google
+Scenario : Unsuccessful login with Google
+Given I am on the login page
+When I click the Google button
+Then entry point Google login page displayed
+When I fill in incorrect email Google account
+Then warning message "Tidak dapat menemukan Akun Google Anda" displayed
+
+(+) Feature : Add Address on feature account
+Scenario : Successful Add Address
+Given I am on the account page
+When I click button "Lihat Alamat"
+Then entry point alamat saya displayed
+When I click button "+ Tambah Alamat baru"
+Then tambah alamat baru page displayed
+When I enter Label Alamat, Nama Lengkap, No handphone, Negara, Provinsi, Kota dan Kecamatan, Kode Pos, Alamat Lengkap, Catatan untuk kurir, checklis atur sebagai alamat utama
+And Click button "Simpan"
+Then new address displayed on page alamat saya
+
+(+) Feature : Search
+Scenario : Successful show result search
+Given I am on voila web
+When I click icon search on header page
+Then section search displayed
+When I enter keyword "sepatu"
+Then result related with keyword "sepatu" displayed
+
+
+General Question:
+1. i think do the test is my passion, because i really enjoy doing test and find bugs
+2. because I am very interested working in IT  and I think being a QA engineer is right for me
+3. i wanna be QA manager 
+4. improve my skills as a QA, and also improve my soft skills regarding management so that later I can become a good leader
+5. I hope that Catalyst can provide good opportunities for my career
